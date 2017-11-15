@@ -20,11 +20,13 @@ const monologueLines = [
 ];
 
 let wordCountMap = monologueLines.reduce(function (countMap, line) {
-  if (line.split(' ').length in countMap) {
-    countMap[count]++;
+	let countWords = line.split(' ').length;
+	
+  if (countWords in countMap) {
+    countMap[countWords]++;
   }
   else {
-    countMap[count] = 1;
+    countMap[countWords] = 1;
   }
 
   return countMap;
