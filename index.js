@@ -1,5 +1,7 @@
 const batteryBatches = [4, 5, 3, 4, 4, 6, 5];
 
+totalBatteries = batteryBatches.reduce((amount, key, value) => amount + value, 0);
+
 const monologueLines = [
   'Who are you talking to right now?',
   'Who is it you think you see?',
